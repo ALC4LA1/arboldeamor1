@@ -101,7 +101,7 @@ function showSignature() {
     dedication.appendChild(signature);
   }
   let firma = getURLParam('firma');
-  signature.textContent = firma ? decodeURIComponent(firma) : "Con amor, Zero";
+  signature.textContent = firma ? decodeURIComponent(firma) : "Deja la chamba";
   signature.classList.add('visible');
 }
 
@@ -146,8 +146,8 @@ function showCountdown() {
   const container = document.getElementById('countdown');
   let startParam = getURLParam('start');
   let eventParam = getURLParam('event');
-  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2024-08-03T00:00:00'); 
-  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2025-08-03T00:00:00');
+  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2026-02-09T00:00:00'); 
+  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2026-02-13T00:00:00');
 
   function update() {
     const now = new Date();
@@ -160,8 +160,8 @@ function showCountdown() {
     let eventSeconds = Math.max(0, Math.floor((eventDiff / 1000) % 60));
 
     container.innerHTML =
-      `Llevamos juntos: <b>${days}</b> días<br>` +
-      `Nuestro aniversario: <b>${eventDays}d ${eventHours}h ${eventMinutes}m ${eventSeconds}s</b>`;
+      `Ultima vez que jugamos, hace: <b>${days}</b> días<br>` +
+      `Proxima vez que juguemos en: <b>${eventDays}d ${eventHours}h ${eventMinutes}m ${eventSeconds}s</b>`;
     container.classList.add('visible');
   }
   update();
