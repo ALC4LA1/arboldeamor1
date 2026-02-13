@@ -146,8 +146,8 @@ function showCountdown() {
   const container = document.getElementById('countdown');
   let startParam = getURLParam('start');
   let eventParam = getURLParam('event');
-  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2026-02-09T00:00:00'); 
-  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2026-02-13T00:00:00');
+  let startDate = startParam ? new Date(startParam + 'T00:00:00') : new Date('2022-12-28T00:00:00'); 
+  let eventDate = eventParam ? new Date(eventParam + 'T00:00:00') : new Date('2026-12-16T00:00:00');
 
   function update() {
     const now = new Date();
@@ -160,8 +160,8 @@ function showCountdown() {
     let eventSeconds = Math.max(0, Math.floor((eventDiff / 1000) % 60));
 
     container.innerHTML =
-      `Ultima vez que jugamos, hace: <b>${days}</b> días<br>` +
-      `Proxima vez que juguemos en: <b>${eventDays}d ${eventHours}h ${eventMinutes}m ${eventSeconds}s</b>`;
+      `Han pasado: <b>${days}</b> días desde que mos hicimos novios por primera vez<br>` +
+      `Lo que falta para tu cumpleaños: <b>${eventDays}d ${eventHours}h ${eventMinutes}m ${eventSeconds}s</b>`;
     container.classList.add('visible');
   }
   update();
@@ -229,7 +229,7 @@ function playBackgroundMusic() {
     btn.textContent = '🔊 Música';
   }).catch(() => {
     // Si falla el autoplay, esperar click en el botón
-    btn.textContent = '▶️ Música';
+    btn.textContent = 'Toca aquí ▶️';
   });
   btn.onclick = () => {
     if (audio.paused) {
