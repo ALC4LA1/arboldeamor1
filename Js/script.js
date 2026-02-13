@@ -70,7 +70,7 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `Feliz día para la niña más linda de todas, No tengo dinero ni tampoco puedo darte algo físicamente, pero escribo esto con mi mente, corazón y alma para que nunca olvides lo muy importante que eres para mi, Gracias a ti aprendí que se siente ser amado, Por eso estoy agradecido contigo, Eres muy especial para mi Reyna peshosha, Te amo con todo mi corazón gracias por estar a mi lado`;  } else {
+    text = `Feliz día para la niña más linda de todas, No tengo dinero ni tampoco puedo darte algo físicamente, pero escribo esto con mi mente, corazón y alma para que nunca olvides lo muy importante que eres para mi, Gracias a ti aprendí que se siente ser amado, Te amo con todo mi corazón gracias por estar a mi lado`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
