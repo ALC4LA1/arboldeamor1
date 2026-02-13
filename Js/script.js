@@ -160,7 +160,7 @@ function showCountdown() {
     let eventSeconds = Math.max(0, Math.floor((eventDiff / 1000) % 60));
 
     container.innerHTML =
-      `Han pasado: <b>${days}</b> días desde que mos hicimos novios por primera vez<br>` +
+      `Han pasado: <b>${days}</b> días desde que nos hicimos novios por primera vez<br>` +
       `Lo que falta para tu cumpleaños: <b>${eventDays}d ${eventHours}h ${eventMinutes}m ${eventSeconds}s</b>`;
     container.classList.add('visible');
   }
