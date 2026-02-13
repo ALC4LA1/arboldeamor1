@@ -70,7 +70,7 @@ function getURLParam(name) {
 function showDedicationText() { //seguidores
   let text = getURLParam('text');
   if (!text) {
-    text = `Cuando vamo' a juga`;  } else {
+    text = `Feliz día para la niña más linda de todas, No tengo dinero ni tampoco puedo darte algo físicamente, pero escribo esto con mi mente, corazón y alma para que nunca olvides lo muy importante que eres para mi, Para mi eres una niña peteña, Gracias a ti aprendí que se siente ser amado, Por eso estoy agradecido contigo y se que aveces no hago las cosas bien y me comportó como un tonto, Deseo estar contigo para toda mi vida que nunca me falte un Buenos días de tu parte, Eres muy especial para mi Reyna peshosha, Te amo con todo mi corazón gracias por estar a mi lado`;  } else {
     text = decodeURIComponent(text).replace(/\\n/g, '\n');
   }
   const container = document.getElementById('dedication-text');
@@ -101,7 +101,7 @@ function showSignature() {
     dedication.appendChild(signature);
   }
   let firma = getURLParam('firma');
-  signature.textContent = firma ? decodeURIComponent(firma) : "Deja la chamba";
+  signature.textContent = firma ? decodeURIComponent(firma) : "Con amor, Jackson ♥";
   signature.classList.add('visible');
 }
 
